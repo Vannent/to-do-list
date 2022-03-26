@@ -1,0 +1,118 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7;
+    color: #3d3d3d;
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+}
+
+.getusername {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.getusername-title {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #75EDBF;
+}
+
+.getusername-title:hover {
+    color: #75EDBF;
+    transform: scale(1.01);
+    text-shadow: 1px 1px 2px #3d3d3d17;
+    transition: transform 330ms ease-in-out;
+}
+
+#name {
+    width: 40vw;
+    height: 3vh;
+    border-style: none;
+    box-shadow: 1px 1px 5px #3d3d3d17;
+}
+
+input:focus { 
+    outline: none !important;
+
+}
+textarea:focus { 
+    outline: none !important;
+}
+
+.username-submit {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    height: 3.5vh;
+    width: 15vw;
+    border-style: none;
+    background-color: #75EDBF;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #3d3d3d;
+    box-shadow: 1px 1px 5px #3d3d3d17
+}
+
+.username-submit:hover {
+    transform: scale(1.05);
+    transition: transform 330ms ease-in-out;
+}
+
+.greet {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.greeting {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.greeting-button {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    height: 3.5vh;
+    width: 15vw;
+    border-style: none;
+    background-color: #75EDBF;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #3d3d3d;
+    box-shadow: 1px 1px 5px #3d3d3d17
+}
+
+.greeting-button:hover {
+    transform: scale(1.05);
+    transition: transform 330ms ease-in-out;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-weight: bold;
+}
+
+footer:hover {
+    color: #75EDBF;
+    transform: scale(1.02);
+    text-shadow: 1px 1px 3px #3d3d3d0e;
+    transition: transform 330ms ease-in-out;
+}
