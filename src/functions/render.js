@@ -18,7 +18,6 @@ function render() {
     content.appendChild(main());
     content.appendChild(footer());
     loadgetName();
-
 };
 
 export default render;

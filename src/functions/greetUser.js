@@ -1,11 +1,11 @@
 // greet username
-const greetUser = () => {
+function greetUser(name) {
     const greet = document.createElement("div");
     greet.className = "greet";
 
         const greeting = document.createElement("div");
         greeting.className = "greeting";
-        greeting.textContent = "Welcome User!"
+        greeting.textContent = "Welcome " + name + "!";
 
         const proceedButton = document.createElement("button");
         proceedButton.className = "greeting-button";
@@ -17,12 +17,12 @@ const greetUser = () => {
     return greet;
 };
 
-const loadGreet = () => {
+const loadGreet = (name) => {
     const main = document.querySelector(".main");
     main.textContent = "";
-    main.appendChild(greetUser());
+    main.appendChild(greetUser(name));
 };
 
 export default loadGreet;
 
-// ask to proceed
+// ask to proceed 
