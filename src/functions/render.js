@@ -1,5 +1,10 @@
 import loadgetName from "./getName";
 
+const header = () => {
+    const header = document.createElement("header");
+    header.className = "header";
+    return header;
+};
 
 const main = () => {
     const main = document.createElement("main");
@@ -15,9 +20,12 @@ const footer = () => {
 
 function render() {
     const content = document.getElementById("content");
-    content.appendChild(main());
-    content.appendChild(footer());
-    loadgetName();
-};
+    const container = document.createElement("div")
+    container.id = "container";
+    container.appendChild(container);
+    container.appendChild(header());
+    container.appendChild(main());
+    container.appendChild(footer());
+    loadgetName();ainer
 
 export default render;
