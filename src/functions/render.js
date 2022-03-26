@@ -22,10 +22,11 @@ function render() {
     const content = document.getElementById("content");
     const container = document.createElement("div")
     container.id = "container";
-    container.appendChild(container);
+    content.appendChild(container);
     container.appendChild(header());
     container.appendChild(main());
     container.appendChild(footer());
-    loadgetName();ainer
+    loadgetName();
+}
 
 export default render;
