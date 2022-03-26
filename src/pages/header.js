@@ -26,7 +26,7 @@ const header = (name) => {
         });
 
         const greeting = document.createElement("p")
-        greeting.textContent = "Hi, " + name + ".";
+        greeting.innerHTML = "Hi, " + '<b>' + name + '</b>' + ".";
 
     const rightside = document.createElement("div");
     rightside.className = "rightside-header";
