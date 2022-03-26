@@ -5,12 +5,15 @@ export const getName = () => {
     getusername.className = "getusername";
         const getusernameTitle = document.createElement("h1");
         getusernameTitle.className = "getusername-title";
-        getusernameTitle.textContent = "What is your Name?";
+        getusernameTitle.textContent = "What is your name?";
 
         const getusernameInput = document.createElement("input");
         getusernameInput.type = "text";
         getusernameInput.id = "name";
         getusernameInput.placeholder = "Chris";
+        getusernameInput.addEventListener("click", (e) => {
+            getusernameInput.placeholder = "";
+        });
 
         const submitButton = document.createElement("button");
         submitButton.className = "username-submit";

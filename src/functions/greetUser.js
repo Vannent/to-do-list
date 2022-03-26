@@ -7,7 +7,7 @@ function greetUser(name) {
 
         const greeting = document.createElement("div");
         greeting.className = "greeting";
-        greeting.textContent = "Welcome " + name + "!";
+        greeting.innerHTML = "Welcome " + '<b>' + name + '</b>' + ".";
 
         const proceedButton = document.createElement("button");
         proceedButton.className = "greeting-button";
@@ -29,4 +29,4 @@ const loadGreet = (name) => {
     main.appendChild(greetUser(name));
 };
 
-export default loadGreet;
+export default loadGreet;   
