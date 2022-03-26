@@ -1,4 +1,3 @@
-// prompt ask for username
 import loadGreet from "./greetUser";
 
 export const getName = () => {

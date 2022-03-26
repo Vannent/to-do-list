@@ -1,4 +1,6 @@
-// greet username
+import loadHeader from "../pages/header";
+import loadSidebar from "../pages/sidebar";
+
 function greetUser(name) {
     const greet = document.createElement("div");
     greet.className = "greet";
@@ -10,6 +12,10 @@ function greetUser(name) {
         const proceedButton = document.createElement("button");
         proceedButton.className = "greeting-button";
         proceedButton.textContent = "Proceed";
+        proceedButton.addEventListener("click", (e) => {
+            loadHeader(name);
+            loadSidebar();
+        });
 
     greet.appendChild(greeting);
     greet.appendChild(proceedButton);
@@ -24,5 +30,3 @@ const loadGreet = (name) => {
 };
 
 export default loadGreet;
-
-// ask to proceed 
