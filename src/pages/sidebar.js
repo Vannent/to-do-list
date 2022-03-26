@@ -1,6 +1,6 @@
 const sidebar = () => {
     const sidebar = document.createElement("div");
-    sidebar.className = "siidebar";
+    sidebar.className = "sidebar";
 
         const homeButton = document.createElement("button");
         homeButton.className = "sidebar-buttons";
