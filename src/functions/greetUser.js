@@ -1,5 +1,6 @@
 import loadHeader from "../pages/header";
 import loadSidebar from "../pages/sidebar";
+import loadCalendar from "./calendar";
 
 function greetUser(name) {
     const greet = document.createElement("div");
@@ -15,6 +16,7 @@ function greetUser(name) {
         proceedButton.addEventListener("click", (e) => {
             loadHeader(name);
             loadSidebar();
+            loadCalendar();
         });
 
     greet.appendChild(greeting);
