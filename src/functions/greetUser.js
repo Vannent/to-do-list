@@ -1,4 +1,5 @@
 import loadHeader from "../pages/header";
+import loadHome from "../pages/home";
 import loadSidebar from "../pages/sidebar";
 import loadCalendar from "./calendar";
 
@@ -16,7 +17,7 @@ function greetUser() {
         proceedButton.addEventListener("click", (e) => {
             loadHeader();
             loadSidebar();
-            loadCalendar();
+            loadHome();
         });
 
     greet.appendChild(greeting);
