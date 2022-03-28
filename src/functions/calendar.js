@@ -19,7 +19,7 @@ const calendar = () => {
 
             const dayOneDate = document.createElement("div");
             dayOneDate.className = "day-dates";
-            dayOneDate.textContent = lastDayMonth;
+            dayOneDate.textContent = dayDate;
 
         const dayTwo = document.createElement("div");
         dayTwo.className = "days";
