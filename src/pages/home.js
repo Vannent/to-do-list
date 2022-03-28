@@ -1,5 +1,8 @@
-// days of the week/calendar
+import loadCalendar from "../functions/calendar";
 
-// today's tasks
+const loadHome = () => {
+    loadCalendar();
+};
 
-// ongoing projects
+
+export default loadHome;
