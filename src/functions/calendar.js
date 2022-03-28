@@ -3,6 +3,8 @@ const calendar = () => {
     const date = new Date();
     const dayName = date.getDay();
     const dayDate = date.getDate(); 
+    const month = new Date(date.getFullYear(), date.getMonth()+ 1, 0);
+    const lastDayMonth = month.getDate() + 1;
 
 
     const calendar = document.createElement("div");
@@ -17,7 +19,7 @@ const calendar = () => {
 
             const dayOneDate = document.createElement("div");
             dayOneDate.className = "day-dates";
-            dayOneDate.textContent = date.getDate();
+            dayOneDate.textContent = lastDayMonth;
 
         const dayTwo = document.createElement("div");
         dayTwo.className = "days";
@@ -27,7 +29,13 @@ const calendar = () => {
 
             const dayTwoDate = document.createElement("div");
             dayTwoDate.className = "day-dates";
-            dayTwoDate.textContent = dayDate + 1;
+            if (dayDate + 1 == lastDayMonth) {
+                dayTwoDate.textContent = 0 + 1;
+            } else if (dayDate + 1 > lastDayMonth) {
+                dayTwoDate.textContent = Number(dayOneDate.textContent) + 1;
+            } else {
+                dayTwoDate.textContent = dayDate + 1;
+            }
 
         const dayThree = document.createElement("div");
         dayThree.className = "days";
@@ -37,7 +45,13 @@ const calendar = () => {
 
             const dayThreeDate = document.createElement("div");
             dayThreeDate.className = "day-dates";
-            dayThreeDate.textContent = dayDate + 2;
+            if (dayDate + 2 == lastDayMonth) {
+                dayThreeDate.textContent = 0 + 1;
+            } else if (dayDate + 2 > lastDayMonth) {
+                dayThreeDate.textContent = Number(dayTwoDate.textContent) + 2;
+            } else {
+                dayThreeDate.textContent = dayDate + 2;
+            }
         
         const dayFour = document.createElement("div");
         dayFour.className = "days";
@@ -47,7 +61,13 @@ const calendar = () => {
 
             const dayFourDate = document.createElement("div");
             dayFourDate.className = "day-dates";
-            dayFourDate.textContent = dayDate + 3;
+            if (dayDate + 3 == lastDayMonth) {
+                dayFourDate.textContent = 0 + 1;
+            } else if (dayDate + 3 > lastDayMonth) {
+                dayFourDate.textContent = Number(dayThreeDate.textContent) + 1;
+            } else {
+                dayFourDate.textContent = dayDate + 3;
+            }
 
         const dayFive = document.createElement("div");
         dayFive.className = "days";
@@ -57,7 +77,14 @@ const calendar = () => {
 
             const dayFiveDate = document.createElement("div");
             dayFiveDate.className = "day-dates";
-            dayFiveDate.textContent = dayDate + 4;
+            if (dayDate + 4 == lastDayMonth) {
+                dayFiveDate.textContent = 0 + 1;
+            } else if (dayDate + 4 > lastDayMonth) {
+                dayFiveDate.textContent = Number(dayFourDate.textContent) + 1;
+            } else {
+                dayFiveDate.textContent = dayDate + 4;
+            }
+
 
         const daySix = document.createElement("div");
         daySix.className = "days";
@@ -67,7 +94,13 @@ const calendar = () => {
 
             const daySixDate = document.createElement("div");
             daySixDate.className = "day-dates";
-            daySixDate.textContent = dayDate + 5;
+            if (dayDate + 5 == lastDayMonth) {
+                daySixDate.textContent = 0 + 1;
+            } else if (dayDate + 5 > lastDayMonth) {
+                daySixDate.textContent = Number(dayFiveDate.textContent) + 1;
+            } else {
+                daySixDate.textContent = dayDate + 5;
+            };
         
         const daySeven = document.createElement("div");
         daySeven.className = "days";
@@ -77,7 +110,13 @@ const calendar = () => {
 
             const daySevenDate = document.createElement("div");
             daySevenDate.className = "day-dates";
-            daySevenDate.textContent = dayDate + 6;
+            if (dayDate + 6 == lastDayMonth) {
+                daySevenDate.textContent = 0 + 1;
+            } else if (dayDate + 6 > lastDayMonth) {
+                daySevenDate.textContent = Number(daySixDate.textContent) + 1;
+            } else {
+                daySevenDate.textContent = dayDate + 6;
+            };
 
     
     calendar.append(dayOne, dayTwo, dayThree, dayThree, dayFour, dayFive, daySix, daySeven);
