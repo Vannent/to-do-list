@@ -3,7 +3,7 @@ import loadSidebar from "./sidebar";
 let sidebarCheck = true;
 
 // sidebar button
-const header = (name) => {
+const header = () => {
     const header = document.createElement("header");
 
     const leftside = document.createElement("div");
@@ -26,7 +26,7 @@ const header = (name) => {
         });
 
         const greeting = document.createElement("p")
-        greeting.innerHTML = "Hi, " + '<b>' + name + '</b>' + ".";
+        greeting.innerHTML = "Hi, " + '<b>' + localStorage.getItem("username") + '</b>' + ".";
 
     const rightside = document.createElement("div");
     rightside.className = "rightside-header";
@@ -48,10 +48,10 @@ const header = (name) => {
     return header;
 }
 
-const loadHeader = (name) => {
+const loadHeader = () => {
     const main = document.querySelector(".main")
     main.textContent = "";
-    main.appendChild(header(name));
+    main.appendChild(header());
 };
 
 export default loadHeader;

@@ -1,4 +1,5 @@
 import loadgetName from "./getName";
+import loadGreet from "./greetUser";
 
 const header = () => {
     const header = document.createElement("header");
@@ -26,7 +27,13 @@ function render() {
     container.appendChild(header());
     container.appendChild(main());
     container.appendChild(footer());
-    loadgetName();
+
+    if (localStorage.getItem("username") === null) {
+        loadgetName();
+    } else {
+        loadGreet();
+    }
+    
 }
 
 export default render;

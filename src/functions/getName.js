@@ -10,6 +10,7 @@ export const getName = () => {
         const getusernameInput = document.createElement("input");
         getusernameInput.type = "text";
         getusernameInput.id = "name";
+        getusernameInput.required = true;
         getusernameInput.placeholder = "Chris";
         getusernameInput.addEventListener("click", (e) => {
             getusernameInput.placeholder = "";
@@ -20,8 +21,10 @@ export const getName = () => {
         submitButton.textContent = "Submit";
         submitButton.value = "submit";
         submitButton.addEventListener("click", (e) => {
+            if (getusernameInput.value == "") return 
             let value = getusernameInput.value;
-            loadGreet(value);
+            localStorage.setItem("username", value);
+            loadGreet();
         });
 
     getusername.appendChild(getusernameTitle);
