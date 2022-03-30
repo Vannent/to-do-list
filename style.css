@@ -294,6 +294,7 @@ input.prompt-description {
 }
 
 .task-project {
+    margin-top: 5px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -303,9 +304,34 @@ input.prompt-description {
     height: 25px;
     width: fit-content;
     border-radius: 25px;
+    text-transform: capitalize;
 }
 
+.projects {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
+.projects-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    justify-content: center;
+    background-color: #75EDBF;
+    height: 100px;
+    width: 150px;
+    box-shadow: 1px 1px 5px #3d3d3d17
+}
 
 footer {
     position: absolute;
