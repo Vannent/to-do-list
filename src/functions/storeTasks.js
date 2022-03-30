@@ -1,6 +1,14 @@
 import loadHeader from "../pages/header";
+import loadHome from "../pages/home";
 
-const storeTasks = () => {
+let myTasks = [{
+    id: 1,
+    title: "Create savings account.",
+    description: "I have to create this soon",
+    project: "financial freedom"
+}];
+
+const taskPrompt = () => {
     const prompt = document.createElement("div")
     prompt.className = "task-prompt";
 
@@ -9,7 +17,7 @@ const storeTasks = () => {
         title.textContent = "Title";
         const titleInput = document.createElement("input");
         titleInput.type = "text";
-        titleInput.placeholder = "Getting groceries.";
+        titleInput.placeholder = "Create savings account...";
         titleInput.required = true;
 
         const description = document.createElement("h1");
@@ -18,7 +26,7 @@ const storeTasks = () => {
         const descriptionInput = document.createElement("input");
         descriptionInput.className = "prompt-description";
         descriptionInput.type = "text";
-        descriptionInput.placeholder = "Getting groceries.";
+        descriptionInput.placeholder = "";
         descriptionInput.required = true;
 
         const project = document.createElement("h1");
@@ -26,7 +34,7 @@ const storeTasks = () => {
         project.textContent = "Project";
         const projectInput = document.createElement("input");
         projectInput.type = "text";
-        projectInput.placeholder = "Getting groceries.";
+        projectInput.placeholder = "Financial Freedom...";
         projectInput.required = true;
 
         const submitButton = document.createElement("button");
@@ -34,9 +42,17 @@ const storeTasks = () => {
         submitButton.textContent = "Add";
         submitButton.addEventListener("click", (e) => {
             if (titleInput.value == "" || descriptionInput.value == "" || projectInput.value == "") return
-            localStorage.setItem("task-title", titleInput.value)
-            localStorage.setItem("task-description", descriptionInput.value)
-            localStorage.setItem("task-project", projectInput.value)
+            const taskTitle = titleInput.value;
+            const taskDescription = descriptionInput.value;
+            const taskProject = projectInput.value;
+            const tasksAdd = task(taskTitle, taskDescription, taskProject);
+            myTasks.push(tasksAdd);
+            titleInput.value = "";
+            descriptionInput.value = "";
+            projectInput.value = "";
+            loadHome();
+            storeTask();
+            console.log(myTasks)
         });
 
 
@@ -45,11 +61,19 @@ const storeTasks = () => {
     return prompt;
 };
 
+const task = (title, description, project) => {
+    return { id: Date.now().toString(), title: title, description: description, project: project }
+};
+
+const storeTask = () => {
+    localStorage.setItem("myTasks", JSON.stringify(myTasks));
+};
+
 const loadTaskPrompt = () => {
     const main = document.querySelector(".main")
     main.textContent = "";
     loadHeader();
-    main.appendChild(storeTasks());
+    main.appendChild(taskPrompt());
 };
 
 export default loadTaskPrompt;
