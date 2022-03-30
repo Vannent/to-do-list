@@ -1,12 +1,7 @@
 import loadHeader from "../pages/header";
 import loadHome from "../pages/home";
 
-let myTasks = [{
-    id: 1,
-    title: "Create savings account.",
-    description: "I have to create this soon",
-    project: "financial freedom"
-}];
+let myTasks = [];
 
 const taskPrompt = () => {
     const prompt = document.createElement("div")
@@ -50,8 +45,8 @@ const taskPrompt = () => {
             titleInput.value = "";
             descriptionInput.value = "";
             projectInput.value = "";
-            loadHome();
             storeTask();
+            loadHome();
             console.log(myTasks)
         });
 
