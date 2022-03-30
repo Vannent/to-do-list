@@ -29,19 +29,6 @@ const tasks = () => {
                 tasksContainer.appendChild(taskCard);
             });
 
-            // const addTask = (task) => {
-            //     const taskCard = document.createElement("div");
-            //     taskCard.className = "task-card";
-            
-            //     taskCard.innerHTML = `
-            //     <div class="task-title">${this.title}</div>
-            //     <div class="task-description">${this.description}</div>
-            //     <div class="task-project">${this.project}</div>
-            //     `;
-            //     tasksContainer.appendChild(taskCard);
-            // };
-            
-
     tasks.append(tasksTitle, tasksContainer);
 
 
