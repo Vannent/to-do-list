@@ -282,7 +282,7 @@ input.prompt-description {
     align-items: center;
     justify-content: center;
     background-color: #e4e2e2c0;
-    height: 100px;
+    height: 120px;
     width: 250px;
     border-radius: 25px;
 }
@@ -305,6 +305,23 @@ input.prompt-description {
     width: fit-content;
     border-radius: 25px;
     text-transform: capitalize;
+}
+
+.task-buttons {
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.task-card button {
+    background-color: transparent;
+    border-style: none;
+    color: #3d3d3d;
+}
+
+svg:hover {
+    transform: scale(1.05);
+    transition: transform 330ms ease-in-out;
 }
 
 .projects {
