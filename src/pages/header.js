@@ -17,7 +17,7 @@ const header = () => {
         `;
         sidebarIcon.addEventListener("click", (e) => {
             if (sidebarCheck == true) {
-                let content = document.querySelector("#content");
+                const content = document.querySelector("#content");
                 content.removeChild(content.lastChild);
                 sidebarCheck = false;
             } else if ( sidebarCheck == false) {
